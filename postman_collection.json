@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "7fa3b9b4-b81f-49f3-8e81-e2c7c7f3b890",
+		"name": "AI Text Classification API",
+		"description": "Postman collection for testing the AI-Assisted Text Classification API powered by OpenRouter.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/health",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Classify - Complaint",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"text\": \"The payment went through twice and I still haven't received an invoice or refund!\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/classify",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"classify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Classify - Query",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"text\": \"Does your premium subscription plan offer multi-user team collaboration?\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/classify",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"classify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Classify - Feedback",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"text\": \"The new dashboard layout is super clean and snappy, great job!\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/classify",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"classify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Classify - Other",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"text\": \"Hey there, hope you are having a nice sunny morning!\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/classify",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"classify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Classify - Validation Error (Empty Text)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"text\": \"\"\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/classify",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"classify"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}
